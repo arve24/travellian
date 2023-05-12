@@ -1,0 +1,3 @@
+@mixin section-padding {
+  padding: clamp(5rem, 2.5rem + 5.21vw, 8.75rem) 0;
+}

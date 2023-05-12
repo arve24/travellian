@@ -1,0 +1,157 @@
+/* ---------------------------------- Offer --------------------------------- */
+
+.offer {
+  @include section-padding;
+
+  @media (max-width: 991px) {
+    padding-bottom: 240px;
+  }
+
+  @media (max-width: 680px) {
+    padding-bottom: 200px;
+  }
+
+  &__container {
+    position: relative;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  &__text {
+    @media (min-width: 860px) {
+      padding-left: 240px;
+    }
+  }
+}
+
+.offer .offer-slider {
+  margin-top: 100px;
+
+  width: 100%;
+
+  position: static;
+
+  &__buttons {
+    top: 105px;
+    left: 15px;
+
+    @media (max-width: 991px) {
+      top: auto;
+      right: auto;
+      bottom: -140px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    @media (max-width: 680px) {
+      bottom: -120px;
+    }
+  }
+}
+
+.offer .offer-slide {
+  background: #fff8f1;
+  border-radius: 26px;
+
+  &__img {
+    height: 285px;
+    width: 100%;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+
+      border-radius: 26px 26px 0px 0px;
+    }
+  }
+
+  &__main {
+    padding: clamp(1.25rem, -0.833rem + 2.78vw, 2.5rem) 24px;
+
+    @media (max-width: 575px) {
+      padding: 20px;
+    }
+  }
+
+  &__title {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 35px;
+
+    color: #767e86;
+  }
+
+  &__star-rating {
+    margin-top: 8px;
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+
+    color: var(--secondary-color);
+
+    margin-top: 28px;
+  }
+
+  &__details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+
+    margin-top: 24px;
+
+    @media (max-width: 420px) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__price {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #767e86;
+
+    span {
+      font-weight: 400;
+      font-size: clamp(1.75rem, 0.5rem + 1.67vw, 2.5rem);
+      line-height: clamp(2.375rem, 1.438rem + 1.25vw, 2.938rem);
+
+      color: var(--primary-color);
+    }
+  }
+
+  &__button {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #ffffff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: clamp(7.938rem, 4.604rem + 4.44vw, 9.938rem);
+    height: clamp(3.438rem, 2.396rem + 1.39vw, 4.063rem);
+
+    background: var(--primary-color);
+
+    border-radius: 12px;
+  }
+}
+
+/* ---------------------------------- /Offer --------------------------------- */

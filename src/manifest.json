@@ -1,0 +1,17 @@
+{
+  "name": "Travellian",
+  "icons": [
+    {
+      "src": "@img/travellian-favicon.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "@img/travellian-favicon.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+
+  "start_url": "../"
+}

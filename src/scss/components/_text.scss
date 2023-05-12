@@ -1,0 +1,13 @@
+.text {
+  font-weight: 400;
+  font-size: clamp(1.125rem, 1.05rem + 0.38vw, 1.5rem);
+  line-height: clamp(1.313rem, 1.225rem + 0.44vw, 1.75rem);
+
+  margin-top: 32px;
+
+  color: #767e86;
+
+  &_right {
+    text-align: right;
+  }
+}

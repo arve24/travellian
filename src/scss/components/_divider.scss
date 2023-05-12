@@ -1,0 +1,16 @@
+.divider {
+  width: clamp(14.188rem, 12.463rem + 8.63vw, 22.813rem);
+  height: 3px;
+
+  margin-top: 20px;
+
+  background: var(--primary-color);
+
+  &_w240 {
+    width: 240px;
+  }
+
+  &_w150 {
+    width: 150px;
+  }
+}

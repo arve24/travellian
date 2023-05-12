@@ -1,0 +1,11 @@
+.slider-buttons {
+  position: absolute;
+
+  display: flex;
+  align-items: center;
+  gap: 40px;
+
+  button {
+    cursor: pointer;
+  }
+}

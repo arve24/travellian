@@ -1,0 +1,40 @@
+/* ---------------------------------- Utils --------------------------------- */
+@import "utils/functions";
+@import "utils/mixins";
+@import "utils/variables";
+/* ---------------------------------- /Utils --------------------------------- */
+
+/* --------------------------------- Vendors -------------------------------- */
+@import "vendors/fancybox";
+
+/* --------------------------------- /Vendors -------------------------------- */
+
+/* ---------------------------------- Base ---------------------------------- */
+@import "base/reset";
+@import "base/fonts";
+@import "base/base";
+/* ---------------------------------- /Base ---------------------------------- */
+
+/* --------------------------------- Layout --------------------------------- */
+@import "layout/header";
+
+@import "layout/hero";
+@import "layout/destinations";
+@import "layout/offer";
+@import "layout/blog";
+@import "layout/planners";
+@import "layout/gallery";
+@import "layout/testimonial";
+@import "layout/newsletter";
+
+@import "layout/footer";
+/* --------------------------------- /Layout --------------------------------- */
+
+/* ------------------------------- Components ------------------------------- */
+@import "components/title";
+@import "components/divider";
+@import "components/text";
+@import "components/slider-buttons";
+@import "components/star-rating";
+
+/* ------------------------------- /Components ------------------------------- */

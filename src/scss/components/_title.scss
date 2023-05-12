@@ -1,0 +1,8 @@
+.title {
+  font-family: "Playfair Display";
+  font-weight: 400;
+  font-size: clamp(2.5rem, 2.2rem + 1.5vw, 4rem);
+  line-height: clamp(3.313rem, 2.913rem + 2vw, 5.313rem);
+
+  color: var(--secondary-color);
+}

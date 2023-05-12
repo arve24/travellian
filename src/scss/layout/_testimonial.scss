@@ -1,0 +1,122 @@
+/* ------------------------------- Testimonial ------------------------------ */
+
+.testimonial {
+  @include section-padding;
+
+  position: relative;
+
+  overflow: visible;
+
+  padding-bottom: 220px;
+
+  @media (max-width: 680px) {
+    padding-bottom: 160px;
+  }
+
+  &__container {
+    @media (max-width: 1920px) and (min-width: 1555px) {
+      max-width: clamp(97.188rem, 48.461rem + 50.14vw, 108.625rem);
+      margin-right: 0;
+    }
+
+    @media (min-width: 680px) {
+      padding-right: 0;
+    }
+  }
+
+  &__slider-container {
+    width: 100%;
+
+    overflow: hidden;
+
+    @media (min-width: 680px) {
+      padding-right: 15px;
+    }
+
+    @media (max-width: 1920px) and (min-width: 1555px) {
+      max-width: clamp(97.188rem, 48.461rem + 50.14vw, 108.625rem);
+    }
+  }
+}
+
+.testimonial .testimonial-slider {
+  min-height: 315px;
+  width: 100%;
+
+  position: static;
+
+  overflow: visible;
+
+  margin-top: 160px;
+
+  @media (max-width: 768px) {
+    margin-top: 100px;
+  }
+
+  &__buttons {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.testimonial .testimonial-slide {
+  background: #f5f6f7;
+
+  border-radius: 12px;
+
+  position: relative;
+
+  padding: 60px 40px 40px 40px;
+
+  @media (max-width: 575px) {
+    padding: 60px 20px 32px 20px;
+  }
+
+  &__avatar {
+    width: 100px;
+    height: 100px;
+
+    position: absolute;
+    top: -65px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+
+      border-radius: 100%;
+    }
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 1.125rem;
+    line-height: 1.28;
+    color: #767e86;
+  }
+
+  &__star-rating {
+    margin-top: 20px;
+  }
+
+  &__name {
+    font-family: "Playfair Display";
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 1.3;
+    color: #767e86;
+
+    margin-top: 20px;
+  }
+
+  &__proffesion {
+    font-size: 1.125rem;
+    line-height: 1.16;
+    color: #767e86;
+
+    margin-top: 4px;
+  }
+}
+
+/* ------------------------------- /Testimonial ------------------------------ */

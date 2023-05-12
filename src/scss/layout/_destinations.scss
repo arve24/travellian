@@ -1,0 +1,114 @@
+/* ------------------------------ Destinations ------------------------------ */
+
+.destinations {
+  @include section-padding;
+
+  @media (max-width: 860px) {
+    padding-bottom: 240px;
+  }
+
+  &__container {
+    position: relative;
+
+    @media (max-width: 1920px) and (min-width: 1555px) {
+      max-width: clamp(97.188rem, 48.461rem + 50.14vw, 108.625rem);
+      margin-right: 0;
+    }
+
+    @media (min-width: 860px) {
+      padding-right: 0;
+    }
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__text {
+    @media (min-width: 860px) {
+      padding-right: 240px;
+    }
+  }
+}
+
+.destinations .destinations-slider {
+  height: 660px;
+
+  margin-top: 100px;
+
+  position: static;
+
+  @media (max-width: 860px) {
+    height: 455px;
+  }
+
+  @media (max-width: 620px) {
+    height: 320px;
+  }
+
+  &__buttons {
+    top: 105px;
+    right: 32px;
+
+    @media (min-width: 1555px) {
+      right: 180px;
+    }
+
+    @media (max-width: 860px) {
+      top: auto;
+      right: auto;
+      bottom: -140px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+.destinations .destinations-slide {
+  &__img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
+    border-radius: 26px;
+  }
+
+  &__text {
+    position: absolute;
+    left: 24px;
+    right: 24px;
+    bottom: 40px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 17px;
+  }
+
+  &__place {
+    font-family: "Playfair Display";
+    font-weight: 500;
+    font-size: clamp(1.5rem, 1.45rem + 0.25vw, 1.75rem);
+    line-height: clamp(2rem, 1.938rem + 0.31vw, 2.313rem);
+    color: #ffffff;
+  }
+
+  &__location {
+    font-weight: 400;
+    font-size: clamp(1rem, 0.9rem + 0.5vw, 1.5rem);
+    line-height: clamp(1.313rem, 1.225rem + 0.44vw, 1.75rem);
+    color: #ffffff;
+
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    svg {
+      min-width: 24px;
+    }
+  }
+}
+
+/* ------------------------------ /Destinations ------------------------------ */

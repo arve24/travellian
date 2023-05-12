@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/head.html', { "title": "Travellian" })
+
+<body>
+  @@include('html/header.html', {})
+
+  <div class="overlay"></div>
+
+  <main class="page">
+    <section class="hero">
+      <div class="hero__container">
+        <h1 class="hero__title">Start your unforgettable journey with us.</h1>
+
+        <p class="hero__text">The best travel for your jouney begins now</p>
+
+        <form action="#" class="hero__form hero-form">
+          <div class="hero-form__block">
+            <label for="destination">Destination</label>
+            <input type="text" id="destination" required class="hero-form__input" />
+          </div>
+
+          <div class="hero-form__block">
+            <label for="person">Person</label>
+            <input type="number" id="person" required class="hero-form__input" />
+          </div>
+
+          <div class="hero-form__block">
+            <label for="check-in">Check in</label>
+            <input type="date" id="check-in" required class="hero-form__input" />
+          </div>
+
+          <div class="hero-form__block">
+            <label for="check-out">Check out</label>
+            <input type="date" id="check-out" required class="hero-form__input" />
+          </div>
+
+          <button type="submit" class="hero-form__button">
+            Book <br />
+            Now
+            <svg width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M21.7071 8.7071C22.0976 8.31658 22.0976 7.68342 21.7071 7.29289L15.3431 0.928931C14.9526 0.538406 14.3195 0.538407 13.9289 0.928931C13.5384 1.31946 13.5384 1.95262 13.9289 2.34314L19.5858 8L13.9289 13.6569C13.5384 14.0474 13.5384 14.6805 13.9289 15.0711C14.3195 15.4616 14.9526 15.4616 15.3431 15.0711L21.7071 8.7071ZM8.74228e-08 9L21 9L21 7L-8.74228e-08 7L8.74228e-08 9Z"
+                fill="white" />
+            </svg>
+          </button>
+        </form>
+      </div>
+
+      <div class="hero__controls hero-controls">
+        <div class="hero-controls__pagination"></div>
+
+        <div class="hero-controls__buttons">
+          <div class="hero-controls__button-prev">
+            <svg width="16" height="8" viewBox="0 0 16 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 1L8 7L15 1" stroke="var(--primary-color)" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </div>
+
+          <div class="hero-controls__button-next">
+            <svg width="16" height="8" viewBox="0 0 16 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 1L8 7L15 1" stroke="var(--primary-color)" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__bg hero-bg swiper">
+        <div class="hero-bg__wrapper swiper-wrapper">
+          <div class="hero-bg__slide swiper-slide"></div>
+          <div class="hero-bg__slide swiper-slide"></div>
+          <div class="hero-bg__slide swiper-slide"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="destinations">
+      <div class="destinations__container">
+        <div class="destinations__header">
+          <h2 class="destinations__title title">Popular Destinations</h2>
+          <hr class="destinations__divider divider" />
+          <p class="destinations__text text">
+            Most popular destinations around the world, from historical places
+            to natural wonders.
+          </p>
+        </div>
+
+        <div class="destinations__slider destinations-slider swiper">
+          <div class="destinations-slider__wrapper swiper-wrapper">
+            <figure class="destinations-slider__slide destinations-slide swiper-slide">
+              <a href="@img/destinations/1.jpeg" data-fancybox
+                data-caption="
+                <p style= 'text-align: center; font-weight: bold;'> Monument of Berlin </p> <p style= 'text-align: center;'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore suscipitesse, totam possimus iure facilis eos asperiores! Quidem, in laborum?</p>">
+                <img src="@img/destinations/1.jpeg" alt="Monument of Berlin" class="destinations-slide__img" /></a>
+              <figcaption class="destinations-slide__text">
+                <div class="destinations-slide__place">
+                  Monument of Berlin
+                </div>
+                <div class="destinations-slide__location">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M3.5625 8.4375C3.5625 12.6054 6.74442 17.1274 9.55209 21.0351C10.2195 21.9634 10.8588 22.8526 11.415 23.6869C11.5454 23.8826 11.7652 24 12 24C12.2347 24 12.4545 23.8826 12.585 23.6869C13.1411 22.8526 13.7804 21.9634 14.4478 21.0351C17.2556 17.1274 20.4375 12.6054 20.4375 8.4375C20.4375 3.78478 16.6527 0 12 0C7.34728 0 3.5625 3.78478 3.5625 8.4375ZM16.2188 8.4375C16.2188 10.7639 14.3264 12.6562 12 12.6562C9.67364 12.6562 7.78125 10.7639 7.78125 8.4375C7.78125 6.11114 9.67364 4.21875 12 4.21875C14.3264 4.21875 16.2188 6.11114 16.2188 8.4375Z"
+                      fill="white" />
+                    <path
+                      d="M12 11.25C13.5533 11.25 14.8125 9.9908 14.8125 8.4375C14.8125 6.8842 13.5533 5.625 12 5.625C10.4467 5.625 9.1875 6.8842 9.1875 8.4375C9.1875 9.9908 10.4467 11.25 12 11.25Z"
+                      fill="white" />
+                  </svg>
+                  Berlin, Germany
+                </div>
+              </figcaption>
+            </figure>
+
+            <figure class="destinations-slider__slide swiper-slide">
+              <a href="@img/destinations/2.jpeg" data-fancybox
+                data-caption="
+                <p style= 'text-align: center; font-weight: bold;'> Millennium Bridge </p> <p style= 'text-align: center;'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore suscipitesse, totam possimus iure facilis eos asperiores! Quidem, in laborum?</p> ">
+                <img src="@img/destinations/2.jpeg" alt="Millennium Bridge" class="destinations-slide__img" />
+              </a>
+              <figcaption class="destinations-slide__text">
+                <div class="destinations-slide__place">Millennium Bridge</div>
+                <div class="destinations-slide__location">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M3.5625 8.4375C3.5625 12.6054 6.74442 17.1274 9.55209 21.0351C10.2195 21.9634 10.8588 22.8526 11.415 23.6869C11.5454 23.8826 11.7652 24 12 24C12.2347 24 12.4545 23.8826 12.585 23.6869C13.1411 22.8526 13.7804 21.9634 14.4478 21.0351C17.2556 17.1274 20.4375 12.6054 20.4375 8.4375C20.4375 3.78478 16.6527 0 12 0C7.34728 0 3.5625 3.78478 3.5625 8.4375ZM16.2188 8.4375C16.2188 10.7639 14.3264 12.6562 12 12.6562C9.67364 12.6562 7.78125 10.7639 7.78125 8.4375C7.78125 6.11114 9.67364 4.21875 12 4.21875C14.3264 4.21875 16.2188 6.11114 16.2188 8.4375Z"
+                      fill="white" />
+                    <path
+                      d="M12 11.25C13.5533 11.25 14.8125 9.9908 14.8125 8.4375C14.8125 6.8842 13.5533 5.625 12 5.625C10.4467 5.625 9.1875 6.8842 9.1875 8.4375C9.1875 9.9908 10.4467 11.25 12 11.25Z"
+                      fill="white" />
+                  </svg>
+                  London, United Kingdom
+                </div>
+              </figcaption>
+            </figure>
+
+            <figure class="destinations-slider__slide swiper-slide">
+              <a href="@img/destinations/3.jpeg" data-fancybox
+                data-caption="
+                <p style= 'text-align: center; font-weight: bold;'> Rialto Bridge </p> <p style= 'text-align: center;'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore suscipitesse, totam possimus iure facilis eos asperiores! Quidem, in laborum?</p> ">
+                <img src="@img/destinations/3.jpeg" alt="Rialto Bridge" class="destinations-slide__img" />
+              </a>
+
+              <figcaption class="destinations-slide__text">
+                <div class="destinations-slide__place">Rialto Bridge</div>
+                <div class="destinations-slide__location">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M3.5625 8.4375C3.5625 12.6054 6.74442 17.1274 9.55209 21.0351C10.2195 21.9634 10.8588 22.8526 11.415 23.6869C11.5454 23.8826 11.7652 24 12 24C12.2347 24 12.4545 23.8826 12.585 23.6869C13.1411 22.8526 13.7804 21.9634 14.4478 21.0351C17.2556 17.1274 20.4375 12.6054 20.4375 8.4375C20.4375 3.78478 16.6527 0 12 0C7.34728 0 3.5625 3.78478 3.5625 8.4375ZM16.2188 8.4375C16.2188 10.7639 14.3264 12.6562 12 12.6562C9.67364 12.6562 7.78125 10.7639 7.78125 8.4375C7.78125 6.11114 9.67364 4.21875 12 4.21875C14.3264 4.21875 16.2188 6.11114 16.2188 8.4375Z"
+                      fill="white" />
+                    <path
+                      d="M12 11.25C13.5533 11.25 14.8125 9.9908 14.8125 8.4375C14.8125 6.8842 13.5533 5.625 12 5.625C10.4467 5.625 9.1875 6.8842 9.1875 8.4375C9.1875 9.9908 10.4467 11.25 12 11.25Z"
+                      fill="white" />
+                  </svg>
+                  Venice, Italy
+                </div>
+              </figcaption>
+            </figure>
+
+            <figure class="destinations-slider__slide swiper-slide">
+              <a href="@img/destinations/4.jpeg" data-fancybox
+                data-caption="
+                <p style= 'text-align: center; font-weight: bold;'> Sea of Orange Tiles </p> <p style= 'text-align: center;'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore suscipitesse, totam possimus iure facilis eos asperiores! Quidem, in laborum?</p> ">
+                <img src="@img/destinations/4.jpeg" alt="Sea of Orange Tiles" class="destinations-slide__img" />
+              </a>
+              <figcaption class="destinations-slide__text">
+                <div class="destinations-slide__place">
+                  Sea of Orange Tiles
+                </div>
+                <div class="destinations-slide__location">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M3.5625 8.4375C3.5625 12.6054 6.74442 17.1274 9.55209 21.0351C10.2195 21.9634 10.8588 22.8526 11.415 23.6869C11.5454 23.8826 11.7652 24 12 24C12.2347 24 12.4545 23.8826 12.585 23.6869C13.1411 22.8526 13.7804 21.9634 14.4478 21.0351C17.2556 17.1274 20.4375 12.6054 20.4375 8.4375C20.4375 3.78478 16.6527 0 12 0C7.34728 0 3.5625 3.78478 3.5625 8.4375ZM16.2188 8.4375C16.2188 10.7639 14.3264 12.6562 12 12.6562C9.67364 12.6562 7.78125 10.7639 7.78125 8.4375C7.78125 6.11114 9.67364 4.21875 12 4.21875C14.3264 4.21875 16.2188 6.11114 16.2188 8.4375Z"
+                      fill="white" />
+                    <path
+                      d="M12 11.25C13.5533 11.25 14.8125 9.9908 14.8125 8.4375C14.8125 6.8842 13.5533 5.625 12 5.625C10.4467 5.625 9.1875 6.8842 9.1875 8.4375C9.1875 9.9908 10.4467 11.25 12 11.25Z"
+                      fill="white" />
+                  </svg>
+                  Lisbon, Portugal
+                </div>
+              </figcaption>
+            </figure>
+          </div>
+
+          <div class="slider-buttons destinations-slider__buttons">
+            <button class="slider-buttons__prev">
+              <svg width="60" height="55" viewBox="0 0 60 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_65_4212)">
+                  <path
+                    d="M60 43.6364V10.9091C60 4.88417 55.1158 0 49.0909 0L10.9091 0C4.88416 0 0 4.88417 0 10.9091V43.6364C0 49.6613 4.88416 54.5455 10.9091 54.5455H49.0909C55.1158 54.5455 60 49.6613 60 43.6364Z"
+                    fill="var(--secondary-color)" />
+                  <path d="M34.5455 18.1818L25.4545 27.2727L34.5455 36.3636" stroke="white" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </g>
+                <defs>
+                  <clipPath>
+                    <rect width="60" height="54.5455" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </button>
+            <button class="slider-buttons__next">
+              <svg width="60" height="55" viewBox="0 0 60 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_65_4215)">
+                  <path
+                    d="M0 10.909L0 43.6363C0 49.6612 4.88417 54.5454 10.9091 54.5454H49.0909C55.1158 54.5454 60 49.6612 60 43.6363V10.909C60 4.88412 55.1158 -4.57764e-05 49.0909 -4.57764e-05H10.9091C4.88417 -4.57764e-05 0 4.88412 0 10.909Z"
+                    fill="var(--primary-color)" />
+                  <path d="M25.4545 36.3636L34.5454 27.2727L25.4545 18.1818" stroke="white" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                </g>
+                <defs>
+                  <clipPath>
+                    <rect width="60" height="54.5455" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="offer">
+      <div class="offer__container">
+        <div class="offer__header">
+          <h2 class="offer__title title">Special Offer</h2>
+          <hr class="offer__divider divider divider_w240" />
+          <p class="offer__text text text_right">
+            Check out our special offer and discounts
+          </p>
+        </div>
+
+        <div class="swiper offer__slider offer-slider">
+          <div class="offer-slider__wrapper swiper-wrapper">
+            <div class="swiper-slide offer-slider__slide offer-slide">
+              <div class="offer-slide__img">
+                <img src="@img/offer/1.jpeg" alt="Lisbon, Portugal" />
+              </div>
+              <div class="offer-slide__main">
+                <h3 class="offer-slide__title">Lisbon, Portugal</h3>
+                <div class="offer-slide__star-rating star-rating">
+                  <span class="fa fa-star star-rating__checked"></span>
+                  <span class="fa fa-star star-rating__checked"></span>
+                  <span class="fa fa-star star-rating__checked"></span>
+                  <span class="fa fa-star star-rating__checked"></span>
+                  <span class="fa fa-star star-rating__checked"></span>
+                </div>
+                <p class="offer-slide__text">
+                  5 nights and 4 days in 5 star hotel, breakfast and lunch
+                  included. Very popular during the renaissance. Passage and
+                  going through the cites of the world in classical
+                  literature.
+                </p>
+                <div class="offer-slide__details">
+                  <div class="offer-slide__price">
+                    From <span> &#8364;500</span>
+                  </div>
+                  <button class="offer-slide__button">Details</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide offer-slider__slide offer-slide">
+              <div class="offer-slide__img">
+                <img src="@img/offer/2.jpeg" alt="Athens, Greece" />
+              </div>
+              <div class="offer-slide__main">
+                <h3 class="offer-slide__title">Athens, Greece</h3>
+                <div class="offer-slide__star-rating star-rating">
+                  <span class="fa fa-star star-rating__checked"></span>
+                  <span class="fa fa-star star-rating__checked"></span>
+                  <span class="fa fa-star star-rating__checked"></span>
+                  <span class="fa fa-star star-rating__checked"></span>
+                  <span class="fa fa-star star-rating__checked"></span>
+                </div>
+                <p class="offer-slide__text">
+                  5 nights and 4 days in 5 star hotel, breakfast and lunch
+                  included. Very popular during the renaissance. Passage and
+                  going through the cites of the world in classical
+                  literature.
+                </p>
+                <div class="offer-slide__details">
+                  <div class="offer-slide__price">
+                    From <span> &#8364;800</span>
+                  </div>
+                  <button class="offer-slide__button">Details</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide offer-slider__slide offer-slide">
+              <div class="offer-slide__img">
+                <img src="@img/offer/3.jpeg" alt="Rome, Italy" />
+              </div>
+              <div class="offer-slide__main">
+                <h3 class="offer-slide__title">Rome, Italy</h3>
+                <div class="offer-slide__star-rating star-rating">
+                  <span class="fa fa-star star-rating__checked"></span>
+                  <span class="fa fa-star star-rating__checked"></span>
+                  <span class="fa fa-star star-rating__checked"></span>
+                  <span class="fa fa-star star-rating__checked"></span>
+                  <span class="fa fa-star star-rating__checked"></span>
+                </div>
+                <p class="offer-slide__text">
+                  5 nights and 4 days in 5 star hotel, breakfast and lunch
+                  included. Very popular during the renaissance. Passage and
+                  going through the cites of the world in classical
+                  literature.
+                </p>
+                <div class="offer-slide__details">
+                  <div class="offer-slide__price">
+                    From <span> &#8364;750</span>
+                  </div>
+                  <button class="offer-slide__button">Details</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide offer-slider__slide offer-slide">
+              <div class="offer-slide__img">
+                <img src="@img/offer/3.jpeg" alt="Rome, Italy" />
+              </div>
+              <div class="offer-slide__main">
+                <h3 class="offer-slide__title">Rome, Italy</h3>
+                <div class="offer-slide__star-rating star-rating">
+                  <span class="fa fa-star star-rating__checked"></span>
+                  <span class="fa fa-star star-rating__checked"></span>
+                  <span class="fa fa-star star-rating__checked"></span>
+                  <span class="fa fa-star star-rating__checked"></span>
+                  <span class="fa fa-star star-rating__checked"></span>
+                </div>
+                <p class="offer-slide__text">
+                  5 nights and 4 days in 5 star hotel, breakfast and lunch
+                  included. Very popular during the renaissance. Passage and
+                  going through the cites of the world in classical
+                  literature.
+                </p>
+                <div class="offer-slide__details">
+                  <div class="offer-slide__price">
+                    From <span> &#8364;750</span>
+                  </div>
+                  <button class="offer-slide__button">Details</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="slider-buttons offer-slider__buttons">
+            <button class="slider-buttons__prev">
+              <svg width="60" height="55" viewBox="0 0 60 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_65_4212)">
+                  <path
+                    d="M60 43.6364V10.9091C60 4.88417 55.1158 0 49.0909 0L10.9091 0C4.88416 0 0 4.88417 0 10.9091V43.6364C0 49.6613 4.88416 54.5455 10.9091 54.5455H49.0909C55.1158 54.5455 60 49.6613 60 43.6364Z"
+                    fill="var(--secondary-color)" />
+                  <path d="M34.5455 18.1818L25.4545 27.2727L34.5455 36.3636" stroke="white" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </g>
+                <defs>
+                  <clipPath>
+                    <rect width="60" height="54.5455" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </button>
+            <button class="slider-buttons__next">
+              <svg width="60" height="55" viewBox="0 0 60 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_65_4215)">
+                  <path
+                    d="M0 10.909L0 43.6363C0 49.6612 4.88417 54.5454 10.9091 54.5454H49.0909C55.1158 54.5454 60 49.6612 60 43.6363V10.909C60 4.88412 55.1158 -4.57764e-05 49.0909 -4.57764e-05H10.9091C4.88417 -4.57764e-05 0 4.88412 0 10.909Z"
+                    fill="var(--primary-color)" />
+                  <path d="M25.4545 36.3636L34.5454 27.2727L25.4545 18.1818" stroke="white" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                </g>
+                <defs>
+                  <clipPath>
+                    <rect width="60" height="54.5455" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="blog">
+      <div class="blog__container">
+        <div class="blog__header">
+          <h2 class="blog__title title">Our Blog</h2>
+          <hr class="blog__divider divider divider_w150" />
+          <p class="blog__text text">
+            An insight the incredible experience in the world
+          </p>
+        </div>
+
+        <article class="blog__preview">
+          <div class="blog__img">
+            <img src="@img/blog.jpeg" alt="Beautiful Italy" />
+          </div>
+          <div class="blog__text">
+            <h2 class="blog__subtitle">
+              Beautiful Italy <br />
+              Let’s travel
+            </h2>
+            <p class="blog__excerpt">
+              But I must explain to you how all this mistaken idea of
+              denouncing pleasure and praising pain was born and I will give
+              you a complete account of the system and expound the actual
+              teachings of the great explorer of the truth, the master-
+              builder of human happiness. No one rejects, dislike, or avoids
+              plasure itself, because it is pleasure, but because those who do
+              not know how to pursue pleasure rationally encounter
+              consequences that are extremly painful. Nor again is there
+              anyone who loves or pursues.
+            </p>
+
+            <button class="blog__button">
+              Read More
+              <svg width="28" height="15" viewBox="0 0 28 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M27.7071 8.2071C28.0976 7.81658 28.0976 7.18342 27.7071 6.79289L21.3431 0.42893C20.9526 0.038406 20.3195 0.038406 19.9289 0.42893C19.5384 0.819455 19.5384 1.45262 19.9289 1.84314L25.5858 7.5L19.9289 13.1569C19.5384 13.5474 19.5384 14.1805 19.9289 14.5711C20.3195 14.9616 20.9526 14.9616 21.3431 14.5711L27.7071 8.2071ZM8.74228e-08 8.5L27 8.5L27 6.5L-8.74228e-08 6.5L8.74228e-08 8.5Z"
+                  fill="var(--primary-color)" />
+              </svg>
+            </button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="planners">
+      <div class="planners__container">
+        <div class="planners__header">
+          <h2 class="planners__title title">Trip Planners</h2>
+          <hr class="planners__divider divider divider_w240" />
+          <p class="planners__text text">
+            20 years from now you will be more disappointed by the things that
+            you didn’t do. Stop regretting and start travelling, start
+            throwing off the bowlines.
+          </p>
+
+          <button class="planners__button">View all trip plans</button>
+        </div>
+
+        <div class="planners__slider planners-slider swiper">
+          <div class="planners-slider__wrapper swiper-wrapper">
+            <div class="planners-slider__slide planners-slide swiper-slide">
+              <div class="planners-slide__img">
+                <img src="@img/planners/1.jpeg" alt="Rome" />
+              </div>
+              <div class="planners-slide__desc planners-desc">
+                <div class="planners-desc__row">
+                  <div class="planners-desc__type">Guided Tour</div>
+                  <div class="planners-desc__price">&#8364;99/Day</div>
+                </div>
+                <div class="planners-desc__location">Rome City Tour</div>
+                <div class="planners-desc__row">
+                  <div class="planners-desc__star-rating star-rating">
+                    <span class="fa fa-star star-rating__checked"></span>
+                    <span class="fa fa-star star-rating__checked"></span>
+                    <span class="fa fa-star star-rating__checked"></span>
+                    <span class="fa fa-star star-rating__checked"></span>
+                    <span class="fa fa-star star-rating__checked"></span>
+                  </div>
+                  <div class="planners-desc__duration">7 Days tour</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="planners-slider__slide planners-slide swiper-slide">
+              <div class="planners-slide__img">
+                <img src="@img/planners/2.jpeg" alt="Paris" />
+              </div>
+              <div class="planners-slide__desc planners-desc">
+                <div class="planners-desc__row">
+                  <div class="planners-desc__type">Guided Tour</div>
+                  <div class="planners-desc__price">&#8364;95/Day</div>
+                </div>
+                <div class="planners-desc__location">Paris City Tour</div>
+                <div class="planners-desc__row">
+                  <div class="planners-desc__star-rating star-rating">
+                    <span class="fa fa-star star-rating__checked"></span>
+                    <span class="fa fa-star star-rating__checked"></span>
+                    <span class="fa fa-star star-rating__checked"></span>
+                    <span class="fa fa-star star-rating__checked"></span>
+                    <span class="fa fa-star star-rating__checked"></span>
+                  </div>
+                  <div class="planners-desc__duration">7 Days tour</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="planners-slider__slide planners-slide swiper-slide">
+              <div class="planners-slide__img">
+                <img src="@img/planners/3.jpeg" alt="Barcelona" />
+              </div>
+              <div class="planners-slide__desc planners-desc">
+                <div class="planners-desc__row">
+                  <div class="planners-desc__type">Guided Tour</div>
+                  <div class="planners-desc__price">&#8364;89/Day</div>
+                </div>
+                <div class="planners-desc__location">Barcelona City Tour</div>
+                <div class="planners-desc__row">
+                  <div class="planners-desc__star-rating star-rating">
+                    <span class="fa fa-star star-rating__checked"></span>
+                    <span class="fa fa-star star-rating__checked"></span>
+                    <span class="fa fa-star star-rating__checked"></span>
+                    <span class="fa fa-star star-rating__checked"></span>
+                    <span class="fa fa-star star-rating__checked"></span>
+                  </div>
+                  <div class="planners-desc__duration">7 Days tour</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="planners-slider__slide planners-slide swiper-slide">
+              <div class="planners-slide__img">
+                <img src="@img/planners/4.jpeg" alt="Budapest" />
+              </div>
+              <div class="planners-slide__desc planners-desc">
+                <div class="planners-desc__row">
+                  <div class="planners-desc__type">Guided Tour</div>
+                  <div class="planners-desc__price">&#8364;89/Day</div>
+                </div>
+                <div class="planners-desc__location">Budapest City Tour</div>
+                <div class="planners-desc__row">
+                  <div class="planners-desc__star-rating star-rating">
+                    <span class="fa fa-star star-rating__checked"></span>
+                    <span class="fa fa-star star-rating__checked"></span>
+                    <span class="fa fa-star star-rating__checked"></span>
+                    <span class="fa fa-star star-rating__checked"></span>
+                    <span class="fa fa-star star-rating__checked"></span>
+                  </div>
+                  <div class="planners-desc__duration">7 Days tour</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery">
+      <div class="gallery__container">
+        <div class="gallery__header">
+          <div class="gallery__title title">Destination Gallery</div>
+          <hr class="gallery__divider divider" />
+          <p class="gallery__text text">Our photo gallery on trip</p>
+        </div>
+        <div class="gallery__slider gallery-slider swiper">
+          <div class="gallery-slider__wrapper swiper-wrapper">
+            <div class="gallery-slider__slide gallery-slide swiper-slide">
+              <img src="@img/gallery/1.jpg" alt="Gallery" />
+            </div>
+            <div class="gallery-slider__slide gallery-slide swiper-slide">
+              <img src="@img/gallery/2.jpg" alt="Gallery" />
+            </div>
+            <div class="gallery-slider__slide gallery-slide swiper-slide">
+              <img src="@img/gallery/3.jpg" alt="Gallery" />
+            </div>
+            <div class="gallery-slider__slide gallery-slide swiper-slide">
+              <img src="@img/gallery/4.jpg" alt="Gallery" />
+            </div>
+            <div class="gallery-slider__slide gallery-slide swiper-slide">
+              <img src="@img/gallery/3.jpg" alt="Gallery" />
+            </div>
+          </div>
+
+          <div class="gallery-slider__buttons slider-buttons">
+            <button class="slider-buttons__prev">
+              <svg width="60" height="55" viewBox="0 0 60 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_65_4212)">
+                  <path
+                    d="M60 43.6364V10.9091C60 4.88417 55.1158 0 49.0909 0L10.9091 0C4.88416 0 0 4.88417 0 10.9091V43.6364C0 49.6613 4.88416 54.5455 10.9091 54.5455H49.0909C55.1158 54.5455 60 49.6613 60 43.6364Z"
+                    fill="var(--secondary-color)" />
+                  <path d="M34.5455 18.1818L25.4545 27.2727L34.5455 36.3636" stroke="white" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </g>
+                <defs>
+                  <clipPath>
+                    <rect width="60" height="54.5455" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </button>
+            <button class="slider-buttons__next">
+              <svg width="60" height="55" viewBox="0 0 60 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_65_4215)">
+                  <path
+                    d="M0 10.909L0 43.6363C0 49.6612 4.88417 54.5454 10.9091 54.5454H49.0909C55.1158 54.5454 60 49.6612 60 43.6363V10.909C60 4.88412 55.1158 -4.57764e-05 49.0909 -4.57764e-05H10.9091C4.88417 -4.57764e-05 0 4.88412 0 10.909Z"
+                    fill="var(--primary-color)" />
+                  <path d="M25.4545 36.3636L34.5454 27.2727L25.4545 18.1818" stroke="white" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                </g>
+                <defs>
+                  <clipPath>
+                    <rect width="60" height="54.5455" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonial">
+      <div class="testimonial__container">
+        <div class="testimonial__header">
+          <h2 class="testimonial__title title">Traveler’s expierences</h2>
+          <hr class="testimonial__divider divider" />
+          <p class="testimonial__text text">
+            Here some awesome feedback from our travelers
+          </p>
+        </div>
+        <div class="testimonial__slider-container">
+          <div class="testimonial__slider testimonial-slider swiper">
+            <div class="testimonial-slider__wrapper swiper-wrapper">
+              <div class="testimonial-slider__slide testimonial-slide swiper-slide">
+                <div class="testimonial-slide__avatar">
+                  <img src="@img/testimonial/1.jpg" alt="Avatar" />
+                </div>
+                <p class="testimonial-slide__text">
+                  But I must explain to you how all this mistaken idea of
+                  denouncing pleasure and praising pain was born and I will
+                  give you a complete account of the system and expound the
+                  actual teachings of the great explorer of the truth, the
+                  master- builder of human happiness.
+                </p>
+
+                <div class="testimonial-slide__star-rating star-rating">
+                  <span class="fa fa-star star-rating__checked"></span>
+                  <span class="fa fa-star star-rating__checked"></span>
+                  <span class="fa fa-star star-rating__checked"></span>
+                  <span class="fa fa-star star-rating__checked"></span>
+                  <span class="fa fa-star star-rating__checked"></span>
+                </div>
+
+                <div class="testimonial-slide__name">John Doe</div>
+                <div class="testimonial-slide__proffesion">Accountant</div>
+              </div>
+
+              <div class="testimonial-slider__slide testimonial-slide swiper-slide">
+                <div class="testimonial-slide__avatar">
+                  <img src="@img/testimonial/2.jpg" alt="Avatar" />
+                </div>
+                <p class="testimonial-slide__text">
+                  But I must explain to you how all this mistaken idea of
+                  denouncing pleasure and praising pain was born and I will
+                  give you a complete account of the system and expound the
+                  actual teachings of the great explorer of the truth, the
+                  master- builder of human happiness.
+                </p>
+
+                <div class="testimonial-slide__star-rating star-rating">
+                  <span class="fa fa-star star-rating__checked"></span>
+                  <span class="fa fa-star star-rating__checked"></span>
+                  <span class="fa fa-star star-rating__checked"></span>
+                  <span class="fa fa-star star-rating__checked"></span>
+                  <span class="fa fa-star star-rating__checked"></span>
+                </div>
+
+                <div class="testimonial-slide__name">John Smith</div>
+                <div class="testimonial-slide__proffesion">
+                  Journalist, HWO News
+                </div>
+              </div>
+
+              <div class="testimonial-slider__slide testimonial-slide swiper-slide">
+                <div class="testimonial-slide__avatar">
+                  <img src="@img/testimonial/3.jpg" alt="Avatar" />
+                </div>
+                <p class="testimonial-slide__text">
+                  But I must explain to you how all this mistaken idea of
+                  denouncing pleasure and praising pain was born and I will
+                  give you a complete account of the system and expound the
+                  actual teachings of the great explorer of the truth, the
+                  master- builder of human happiness.
+                </p>
+
+                <div class="testimonial-slide__star-rating star-rating">
+                  <span class="fa fa-star star-rating__checked"></span>
+                  <span class="fa fa-star star-rating__checked"></span>
+                  <span class="fa fa-star star-rating__checked"></span>
+                  <span class="fa fa-star star-rating__checked"></span>
+                  <span class="fa fa-star star-rating__checked"></span>
+                </div>
+
+                <div class="testimonial-slide__name">Tamara Bellis</div>
+                <div class="testimonial-slide__proffesion">
+                  Managing Director, JTH
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-slider__buttons slider-buttons">
+              <button class="slider-buttons__prev">
+                <svg width="60" height="55" viewBox="0 0 60 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_65_4212)">
+                    <path
+                      d="M60 43.6364V10.9091C60 4.88417 55.1158 0 49.0909 0L10.9091 0C4.88416 0 0 4.88417 0 10.9091V43.6364C0 49.6613 4.88416 54.5455 10.9091 54.5455H49.0909C55.1158 54.5455 60 49.6613 60 43.6364Z"
+                      fill="var(--secondary-color)" />
+                    <path d="M34.5455 18.1818L25.4545 27.2727L34.5455 36.3636" stroke="white" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </g>
+                  <defs>
+                    <clipPath>
+                      <rect width="60" height="54.5455" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </button>
+              <button class="slider-buttons__next">
+                <svg width="60" height="55" viewBox="0 0 60 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_65_4215)">
+                    <path
+                      d="M0 10.909L0 43.6363C0 49.6612 4.88417 54.5454 10.9091 54.5454H49.0909C55.1158 54.5454 60 49.6612 60 43.6363V10.909C60 4.88412 55.1158 -4.57764e-05 49.0909 -4.57764e-05H10.9091C4.88417 -4.57764e-05 0 4.88412 0 10.909Z"
+                      fill="var(--primary-color)" />
+                    <path d="M25.4545 36.3636L34.5454 27.2727L25.4545 18.1818" stroke="white" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </g>
+                  <defs>
+                    <clipPath>
+                      <rect width="60" height="54.5455" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="newsletter">
+      <div class="newsletter__container">
+        <div class="newsletter__wrapper">
+          <h2 class="newsletter__title">Our Newsletter</h2>
+
+          <form action="#" class="newsletter__form newsletter-form">
+            <div class="newsletter-form__email">
+              <label for="newsletter-email">Email</label>
+              <input type="email" name="Emailco" id="newsletter-email" class="newsletter-form__input"
+                placeholder="Enter your email" required />
+            </div>
+
+            <button type="submit" id="newsletter-submit" class="newsletter-form__button">
+              Subscribe
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  @@include('html/footer.html', {})
+</body>
+
+</html>
