@@ -1772,8 +1772,7 @@ footer {
 .hero {
   padding: 270px 0;
   position: relative;
-  background: #023e01;
-  background: linear-gradient(135deg, #023e01, #016f69);
+  background-image: linear-gradient(to bottom, #5d9eff, #3fafff, #25beff, #25cbff, #40d8ff);
   z-index: -1;
 }
 
