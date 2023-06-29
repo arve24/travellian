@@ -1772,7 +1772,7 @@ footer {
 .hero {
   padding: 270px 0;
   position: relative;
-  background-image: linear-gradient(to bottom, #5d9eff, #3fafff, #25beff, #25cbff, #40d8ff);
+  background-color: var(--secondary-color);
   z-index: 1;
 }
 
@@ -3048,6 +3048,10 @@ footer {
     border-radius: 16px;
     grid-template-columns: repeat(1, 1fr);
     left: 0;
+  }
+
+  .hero-form__input {
+    width: 100%;
   }
 
   .hero-form__button {
